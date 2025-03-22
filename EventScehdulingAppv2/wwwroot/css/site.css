@@ -20,3 +20,8 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/* Navbar color */
+.navbar {
+    background-color: #0e760d3d
+}
