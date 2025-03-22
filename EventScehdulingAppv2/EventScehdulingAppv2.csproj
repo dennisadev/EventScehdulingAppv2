@@ -12,4 +12,11 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Content\Images\img1.jpg" />
+    <None Include="wwwroot\Content\Images\img2.jpg" />
+    <None Include="wwwroot\Content\Images\img3.jpg" />
+    <None Include="wwwroot\Content\Images\img4.jpg" />
+  </ItemGroup>
+
 </Project>
