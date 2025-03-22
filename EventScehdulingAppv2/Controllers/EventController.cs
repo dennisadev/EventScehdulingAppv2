@@ -47,7 +47,7 @@ namespace EventScehdulingAppv2.Controllers
         public IActionResult AddEventToDatabase(Event evt)
         {
             repo.AddEvent(evt);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
         }
 
     }

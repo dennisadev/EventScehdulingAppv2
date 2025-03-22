@@ -32,7 +32,7 @@
 <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
 
     <form method="get" action="/Event/Delete/@Model.EventID" style="margin-right: 10px;">
-        <button type="submit" class="btn btn-danger">Delete this Event</button>
+        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure want to delete this event?')">Delete this Event</button>
     </form>
 
     <form method="get" action="/Event/Update/@Model.EventID" style="margin-right: 10px;">
