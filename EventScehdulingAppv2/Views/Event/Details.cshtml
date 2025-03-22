@@ -1,0 +1,42 @@
+﻿@namespace EventSchedulingAppv2.Models
+@model Event
+
+<h2>Event View</h2>
+
+<!--Table to view All Event and Collumns-->
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Date</th>
+        <th>Contract</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+        <th>Email Address</th>
+        <th>Description</th>
+
+    </tr>
+
+
+    <tr>
+        <td>@Model.EventID</td>
+        <td>@Model.EventDate.ToString("MMM-dd-yyyy")</td>
+        <td>@Model.Contract</td>
+        <td>@Model.FirstName</td>
+        <td>@Model.LastName</td>
+        <td>@Model.PhoneNumber</td>
+        <td>@Model.EmailAddress</td>
+        <td>@Model.EventDescription</td>
+    </tr>
+
+</table>
+
+<div style="display: flex; justify-content: flex-end; margin-top: 20px;">
+    <form method="get" action="/Event/Update/@Model.EventID" style="margin-right: 10px;">
+        <button type="submit" class="btn btn-primary">Update this Event</button>
+    </form>
+
+    <form method="get" action="/Event/Delete/@Model.EventID" style="margin-left: 10px;">
+        <button type="submit" class="btn btn-danger">Delete this Event</button>
+    </form>
+</div>

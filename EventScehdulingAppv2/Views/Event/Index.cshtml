@@ -1,0 +1,41 @@
+﻿@namespace EventSchedulingAppv2.Models
+@model IEnumerable<Event>
+
+<h2>Events</h2>
+
+<!--Table to view All Event and Collumns-->
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Date</th>
+        <th>Contract</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+        <th>Email Address</th>
+        <th>Description</th>
+        <th>Action</th>
+
+    </tr>
+
+    @foreach (var Event in @Model)
+    {
+        <tr>
+            <td>@Event.EventID</td>
+            <td>@Event.EventDate.ToString("MMM-dd-yyyy")</td>
+            <td>@Event.Contract</td>
+            <td>@Event.FirstName</td>
+            <td>@Event.LastName</td>
+            <td>@Event.PhoneNumber</td>
+            <td>@Event.EmailAddress</td>
+            <td>@Event.EventDescription</td>
+            <td>
+                <form method="get" action="/Event/Details/@Event.EventID">
+                    <button type="submit" class="btn btn-primary">View Details</button>
+                </form>
+            </td>
+        </tr>
+    }
+
+
+</table>
