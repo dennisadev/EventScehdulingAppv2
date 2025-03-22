@@ -16,7 +16,7 @@ namespace EventScehdulingAppv2.Models
 
         public IEnumerable<Event> GetAllEvents()
         {
-            return _conn.Query<Event>("SELECT * FROM tblevent");
+            return _conn.Query<Event>("SELECT * FROM tblevent ORDER BY EventDate DESC");
         }
         public Event GetEventById(int eventId)
         {

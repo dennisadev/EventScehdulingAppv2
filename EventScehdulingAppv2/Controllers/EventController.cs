@@ -1,5 +1,7 @@
 ﻿using EventScehdulingAppv2.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace EventScehdulingAppv2.Controllers
 {

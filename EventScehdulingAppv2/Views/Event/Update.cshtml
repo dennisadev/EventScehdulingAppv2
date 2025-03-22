@@ -1,16 +1,15 @@
 ﻿@namespace EventSchedulingAppv2.Models
 @model Event
 
-<h2>Update @Model.EventID</h2>
+<h2>Update Event</h2>
 
 @using (Html.BeginForm("UpdateToDatabase", "Event", "Post"))
 {
 
     <input asp-for="EventID" type="hidden" value="@Model.EventID" />
-    //<input asp-for="EventDate" type="hidden" value="@Model.EventDate">
-    //Added for testing. See below.
-    //<input asp-for="Contract" type="hidden" value="@Model.Contract" />
-    //Added for testing. See below.
+
+    <label asp-for="EventDate" class="control-label">Event Date</label>
+    <input type="date" name="EventDate" class="form-control" value="@Model.EventDate.ToString("yyyy-MM-dd")" min="@DateTime.Now.ToString("yyyy-MM-dd")" />
 
     <label asp-for="FirstName" class="control-label">First Name</label>
     <input type="text" name="FirstName" class="form-control" value="@Model.FirstName" />
@@ -24,17 +23,16 @@
     <label asp-for="PhoneNumber" class="control-label">Phone Number</label>
     <input type="text" name="PhoneNumber" class="form-control" value="@Model.PhoneNumber" />
 
-    //Comented out for testing. Need to check if format is correct.
-    <label asp-for="EventDate" class="control-label">Event Date</label>
-    <input type="date" name="EventDate" class="form-control" value="@Model.EventDate.ToString("yyyy-MM-dd")" />
-
     <label asp-for="EventDescription" class="control-label">Event Description</label>
     <input type="text" name="EventDescription" class="form-control" value="@Model.EventDescription" />
 
-     //Comented out for testing. Need to check if asp.net forms is correct.
-    <label asp-for="Contract" class="control-label">Contract</label>
-    <input type="checkbox" name="Contract" class="form-control" value="@Model.Contract" />
+    <div class="form-check" style="display: flex; justify-content: flex-end; margin-top: 20px;">
+        <label asp-for="Contract" class="form-check-label" for="Contract" style= "margin-right: 50px">Contract</label>
+        <input asp-for="Contract" class="form-check-input" id="Contract" style="transform: scale(1.25)" />
+    </div>
 
-    <input type="submit" value="Update Event" class="btn btn-primary" />
+    <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
+        <input type="submit" value="Update Event" class="btn btn-primary" />
+    </div>
 
 }

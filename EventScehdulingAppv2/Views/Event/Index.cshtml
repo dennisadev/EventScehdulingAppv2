@@ -6,7 +6,6 @@
 <!--Table to view All Event and Collumns-->
 <table class="table">
     <tr>
-        <th>ID</th>
         <th>Date</th>
         <th>Contract</th>
         <th>First Name</th>
@@ -21,9 +20,8 @@
     @foreach (var Event in @Model)
     {
         <tr>
-            <td>@Event.EventID</td>
             <td>@Event.EventDate.ToString("MMM-dd-yyyy")</td>
-            <td>@Event.Contract</td>
+            <td>@(Event.Contract ? "Complete" : "Pending")</td>
             <td>@Event.FirstName</td>
             <td>@Event.LastName</td>
             <td>@Event.PhoneNumber</td>
