@@ -11,9 +11,9 @@
         <th>First Name</th>
         <th>Last Name</th>
         <th>Phone Number</th>
-        <th>Email Address</th>
         <th>Description</th>
-        <th>Action</th>
+        <th></th>
+        <th></th>
 
     </tr>
 
@@ -25,12 +25,14 @@
             <td>@Event.FirstName</td>
             <td>@Event.LastName</td>
             <td>@Event.PhoneNumber</td>
-            <td>@Event.EmailAddress</td>
             <td>@Event.EventDescription</td>
             <td>
                 <form method="get" action="/Event/Details/@Event.EventID">
                     <button type="submit" class="btn btn-primary">View Details</button>
                 </form>
+            </td>
+            <td>
+                <a href="mailto:@Event.EmailAddress" class="btn btn-secondary">Send Email</a>
             </td>
         </tr>
     }
