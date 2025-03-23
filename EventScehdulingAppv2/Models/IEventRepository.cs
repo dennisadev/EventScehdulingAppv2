@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace EventScehdulingAppv2.Models
 {
+
+    //Interface for the EventRepository class with stubs for the methods
     public interface IEventRepository
     {
         public IEnumerable<Event> GetAllEvents();

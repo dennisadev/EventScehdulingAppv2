@@ -1,12 +1,10 @@
 ﻿@namespace EventSchedulingAppv2.Models
 @model Event
 
-@{
-    // Get the scheduled dates from the ViewBag
-    var scheduledDates = ViewBag.ScheduledDates as List<DateTime>;
-}
 
 <h2>Schedule an Event</h2>
+
+<!--Basic form to collect input for adding an event-->
 
 @using (Html.BeginForm("AddEventToDatabase", "Event", "Post"))
 {

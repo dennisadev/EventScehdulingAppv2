@@ -21,12 +21,12 @@ body {
   margin-bottom: 60px;
 }
 
-/* Navbar color */
+/* Added CSS for Navbar color */
 .navbar {
   background-color: #218838a4;
 }
 
-/* Button colors */
+/* Added CSS for button colors */
 .btn-primary {
   background-color: #28a745; /* Green */
   border-color: #28a745;

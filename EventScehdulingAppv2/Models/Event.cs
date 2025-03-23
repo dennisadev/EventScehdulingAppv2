@@ -1,5 +1,7 @@
 ﻿namespace EventScehdulingAppv2.Models
 {
+
+    //Contains the properties of an event as in the database
     public class Event
     {
         public int EventID { get; set; }
